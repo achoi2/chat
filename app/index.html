@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="chat">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
@@ -7,6 +7,36 @@
 </head>
 <body>
     <h4>Hello, World???</h4>
+
+    <ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Angular UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD9-shae6QvKV92EhLrTO0Ydoz-5OpUvi0",
+            authDomain: "chat-44b51.firebaseapp.com",
+            databaseURL: "https://chat-44b51.firebaseio.com",
+            projectId: "chat-44b51",
+            storageBucket: "chat-44b51.appspot.com",
+            messagingSenderId: "491295532724"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Application Files -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
 </body>
 </html>
