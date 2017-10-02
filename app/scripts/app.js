@@ -12,9 +12,10 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
+
     }
 
     angular
         .module('chat', ['ui.router','firebase'])
-        .config(config);  
+        .config(config);
 })();
