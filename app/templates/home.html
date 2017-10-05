@@ -1,3 +1,5 @@
-<div ng-repeat="Rooms in Room.all">
-  <h1>Rooms</h1>
+<div ng-repeat="room in home.rooms">
+  <h1>Rooms {{room.$value}}</h1>
+  <!-- show the room name -->
+  <!-- later with message, store in their own objects in a messages firebase arrayroomId: with current room id -->
 </div>
