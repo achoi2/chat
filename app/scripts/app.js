@@ -13,9 +13,10 @@
                 templateUrl: '/templates/home.html'
             });
 
+
     }
 
     angular
-        .module('chat', ['ui.router','firebase'])
+        .module('chat', ['ui.router','firebase', 'ui.bootstrap'])
         .config(config);
 })();
