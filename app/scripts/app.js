@@ -17,6 +17,6 @@
     }
 
     angular
-        .module('chat', ['ui.router','firebase', 'ui.bootstrap'])
+        .module('chat', ['ui.router','firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 })();
