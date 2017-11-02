@@ -8,12 +8,15 @@
     <h2 class="rooms" ng-click="home.setNewRoom(room.$id)" ng-repeat="room in home.rooms">{{room.name}}</h2>
 </section>
 
-<div>
-    <button type="button" ng-click="home.currentRoomId()">CreateNewMessage</button>
-</div>
-
 <section class="container" ng-repeat="message in home.messages">
   <p>{{message.content}}</p>
 </section>
 
-input + button + click handler to create a messages. pass in home.currentRoomId and content
+<!-- form is only visible if a curent room is set -->
+<!-- style css -->
+<!-- add usernames -->
+<!-- add username and createdAt to messages, then sort messages by createdAt + show username -->
+<form ng-submit="home.submitMessage()">
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="Submit" />
+</form>

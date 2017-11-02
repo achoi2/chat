@@ -6,7 +6,7 @@
 
 
         Message.add = function(messageContent, roomId) {
-            messages.$add({content: "text",
+            messages.$add({content: messageContent,
                             roomId: roomId})
         }
 
@@ -14,6 +14,9 @@
             var messagesByRoomIdRef = ref.orderByChild("roomId").equalTo(roomId);
             return $firebaseArray(messagesByRoomIdRef)
         }
+
+
+
       return Message;
 
     }

@@ -1,8 +1,8 @@
 (function() {
-    function HomeCtrl($cookies, Room, $uibModal, Message) {
+    function HomeCtrl($scope, $cookies, Room, $uibModal, Message) {
         this.currentRoomId = null;
         this.rooms = Room.all;
-        this.getByRoomId = Message.getByRoomId;
+        // this.getByRoomId = Message.getByRoomId;
         // this.messages = Messages.messages
 
         this.createNewRoom = function() {
@@ -19,13 +19,21 @@
 
         this.setNewRoom = function(roomId) {
             this.currentRoomId = roomId;
-            this.messages = this.getByRoomId(roomId);
+            this.messages = Message.getByRoomId(roomId);
             console.log(this.messages)
+        }
+
+        this.submitMessage = function () {
+          if ($scope.text != '') {
+            var text = $scope.text;
+            $scope.text = '';
+            Message.add(text, this.currentRoomId)
+          }
         }
 
       }
 
     angular
         .module('chat')
-        .controller('HomeCtrl', ['$cookies', 'Room', '$uibModal','Message', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', '$cookies', 'Room', '$uibModal','Message', HomeCtrl]);
 })();
