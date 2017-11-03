@@ -6,7 +6,7 @@
 
 
         Message.add = function(messageContent, roomId) {
-            messages.$add({content: "text",
+            messages.$add({content: messageContent,
                             roomId: roomId})
         }
 
