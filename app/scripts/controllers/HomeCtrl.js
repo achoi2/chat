@@ -2,8 +2,13 @@
     function HomeCtrl($scope, $cookies, Room, $uibModal, Message) {
         this.currentRoomId = null;
         this.rooms = Room.all;
+<<<<<<< HEAD
         // this.getByRoomId = Message.getByRoomId;
         // this.messages = Messages.messages
+=======
+    //  this.getByRoomId = Message.getByRoomId;
+      // this.messages = Messages.messages
+>>>>>>> checkpoint6
 
         this.createNewRoom = function() {
           // detect if a modal is open, and if so close instead
@@ -24,11 +29,19 @@
         }
 
         this.submitMessage = function () {
+<<<<<<< HEAD
           if ($scope.text != '') {
             var text = $scope.text;
             $scope.text = '';
             Message.add(text, this.currentRoomId)
           }
+=======
+            if ($scope.text != '') {
+                var text = $scope.text;
+                $scope.text = '';
+                Message.add(text, this.currentRoomId)
+            }
+>>>>>>> checkpoint6
         }
 
       }

@@ -11,7 +11,7 @@
         }
     }
 
-    angular
-        .module('chat')
-        .run(['$cookies', '$uibModal', chatCookies]);
+      angular
+         .module('chat')
+         .run(['$cookies', '$uibModal', chatCookies]);
 })();
